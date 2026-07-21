@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Básica</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login por Key</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<header>
-    <h1>🛒 Minha Loja</h1>
-</header>
+<div class="background"></div>
 
-<main class="produtos">
+<div class="login-box">
 
-    <div class="card">
-        <h2>Produto 1</h2>
-        <p>R$ 49,90</p>
-        <button onclick="comprar('Produto 1')">Comprar</button>
-    </div>
+    <h1>🔐 Login</h1>
 
-    <div class="card">
-        <h2>Produto 2</h2>
-        <p>R$ 89,90</p>
-        <button onclick="comprar('Produto 2')">Comprar</button>
-    </div>
+    <p class="subtitle">
+        Digite sua chave de acesso para continuar.
+    </p>
 
-    <div class="card">
-        <h2>Produto 3</h2>
-        <p>R$ 129,90</p>
-        <button onclick="comprar('Produto 3')">Comprar</button>
-    </div>
+    <input
+    id="keyInput"
+    type="text"
+    placeholder="Digite sua Key">
 
-</main>
+    <button id="loginButton">
+        Entrar
+    </button>
+
+    <div id="status"></div>
+
+</div>
 
 <script src="script.js"></script>
 
