@@ -2,62 +2,113 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#111;
-    color:white;
-}
-
-header{
-    background:#1b1b1b;
-    text-align:center;
-    padding:20px;
-    border-bottom:2px solid #333;
-}
-
-.produtos{
+    height:100vh;
     display:flex;
     justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    padding:30px;
+    align-items:center;
+    background:#0d1117;
+    overflow:hidden;
 }
 
-.card{
-    background:#222;
-    width:220px;
-    padding:20px;
-    border-radius:12px;
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#5d2cff 0%,transparent 40%),
+    radial-gradient(circle at bottom,#00d4ff 0%,transparent 35%),
+    #0d1117;
+    filter:blur(50px);
+    opacity:.8;
+}
+
+.login-box{
+    position:relative;
+    width:420px;
+    padding:40px;
+    border-radius:22px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+    0 0 40px rgba(0,0,0,.4),
+    0 0 25px rgba(93,44,255,.25);
     text-align:center;
-    transition:0.3s;
+    color:white;
+    animation:fade .6s;
 }
 
-.card:hover{
-    transform:scale(1.05);
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.card h2{
+.login-box h1{
+    font-size:34px;
     margin-bottom:10px;
 }
 
-.card p{
-    color:#00ff88;
-    font-size:20px;
-    margin-bottom:15px;
+.subtitle{
+    opacity:.75;
+    margin-bottom:30px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#1c2333;
+    color:white;
+    font-size:16px;
+    margin-bottom:18px;
+    transition:.3s;
+}
+
+input:focus{
+    box-shadow:0 0 15px #5d2cff;
 }
 
 button{
-    background:#00bfff;
-    color:white;
+    width:100%;
+    padding:15px;
     border:none;
-    padding:10px 20px;
-    border-radius:8px;
+    border-radius:12px;
     cursor:pointer;
-    font-size:16px;
+    font-size:17px;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(90deg,#5d2cff,#00d4ff);
+    transition:.3s;
 }
 
 button:hover{
-    background:#0095cc;
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(0,212,255,.45);
+}
+
+#status{
+    margin-top:18px;
+    font-size:15px;
+    min-height:22px;
+    color:#ffb3b3;
+}
+
+@media(max-width:500px){
+
+.login-box{
+    width:92%;
+    padding:30px;
+}
+
 }
