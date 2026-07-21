@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    background:#1b1b1b;
+    text-align:center;
+    padding:20px;
+    border-bottom:2px solid #333;
+}
+
+.produtos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:30px;
+}
+
+.card{
+    background:#222;
+    width:220px;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#00ff88;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+button{
+    background:#00bfff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0095cc;
+}
